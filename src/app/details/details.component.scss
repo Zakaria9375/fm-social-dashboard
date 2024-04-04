@@ -1,0 +1,33 @@
+@import "../scss/base";
+
+:host {
+  padding: 27px 31px 19px 24px;
+  background-color: getColor(bg-card);
+  &:hover {
+    background-color: getColor(bg-card-hover);
+    cursor: pointer;
+  }
+  border-radius: 5px;
+  @include tablet {
+    flex: 1 0 255px;
+    max-width: 255px;
+  }
+  .details-info {
+    img {
+      height: 20px;
+    }
+  }
+  .details-score {
+    margin-top: 23px;
+  }
+  .cardDetail-subscore {
+    margin-top: 19px;
+    gap: 4px;
+    h5.up {
+      color: getColor(limoo);
+    }
+    h5.down {
+      color: getColor(tomatoo);
+    }
+  }
+}

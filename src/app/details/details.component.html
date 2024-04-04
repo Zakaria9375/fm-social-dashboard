@@ -1,0 +1,11 @@
+<div class="details-info zflex">
+  <h4>{{cardDetail.title}}</h4>
+  <img [src]="'assets/images/icon-' + cardDetail.img + '.svg'" [alt]="'icon' + cardDetail.img">
+</div>
+<div class="details-score zflex">
+  <h3>{{cardDetail.score}}</h3>
+  <div class="cardDetail-subscore xflex">
+    <img [src]="'assets/images/icon-' + cardDetail.icon + '.svg'" [alt]="'icon'+cardDetail.icon">
+    <h5 [ngClass]="cardClasses()">{{cardDetail.subScore}}</h5>
+  </div>
+</div>

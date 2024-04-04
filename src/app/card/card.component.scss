@@ -1,0 +1,54 @@
+@import '../scss/base';
+
+
+:host {
+  position: relative;
+  text-align: center;
+  padding: 32px 16px 24px;
+  background-color: getColor(bg-card);
+  &:hover {
+    background-color: getColor(bg-card-hover);
+    cursor: pointer;
+  }
+  border-radius: 5px;
+  overflow: hidden;
+  @include tablet {
+    flex: 1 0 255px;
+    max-width: 255px;
+  }
+  @include g-border-classes;
+  .border-card {
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+  .card-info {
+    gap: 8px;
+    height: 20px;
+    align-items: center;
+  }
+  .score {
+    h1 {
+      margin-top: 28px;
+    }
+    h5 {
+      margin-top: 9px;
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 5px;
+    }
+  }
+  .card-subscore {
+    gap: 4px;
+    margin-top: 25px;
+    h5.up {
+      color: getColor(limoo);
+    }
+    h5.down {
+      color: getColor(tomatoo)
+    }
+  }
+}

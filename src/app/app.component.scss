@@ -1,0 +1,81 @@
+@import "../scss/_base.scss";
+
+main {
+  padding: 36px 24px 45px;
+  position: relative;
+  min-height: 100dvh;
+  background-color: getColor(bg-primary);
+
+  .landing-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 235px;
+    z-index: 1;
+    width: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: getColor(body-sec);
+    @include tablet {
+      height: 244px;
+    }
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1113px;
+    header {
+      margin-bottom: 46px;
+      @include mobile {
+        flex-direction: column;
+        margin-bottom: 40px;
+        .header-title {
+          padding-bottom: 24px;
+          border-bottom: 1px solid getColor(divider);
+          width: 100%;
+          h4 {
+            margin-top: 4px;
+          }
+        }
+      }
+    }
+    .content {
+      @include tablet {
+        margin-left: 3px;
+      }
+      > h2 {
+        margin-top: 46px;
+        margin-bottom: 24px;
+        color: getColor(grey);
+        line-height: 29px;
+        font-size: 24px;
+      }
+    }
+    .all-cards {
+      display: flex;
+      flex-wrap: wrap;
+      @include tablet {
+        justify-content: center;
+      }
+      gap: 24px 30px;
+      @include mobile {
+        flex-direction: column;
+        gap: 24px;
+      }
+    }
+    .all-details {
+      display: flex;
+      flex-wrap: wrap;
+      @include tablet {
+        justify-content: center;
+      }
+      gap: 24px 30px;
+      @include mobile {
+        flex-direction: column;
+        gap: 24px;
+      }
+    }
+  }
+}

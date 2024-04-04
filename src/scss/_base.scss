@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  transition: 0.25s;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+
+}
+$social-colors: (
+  youtube: #c4032b,
+  twitter: #1da1f2,
+  facebook: #178ff5,
+  instagram: linear-gradient(to left, #fdc366 0%, #ee877e 50%, #df4896 100%),
+);
+
+:root {
+  --clr-limoo: #1eb589;
+  --clr-tomatoo: #dc414c;
+  --clr-youtube: #c4032b;
+  --clr-twitter: #1da1f2;
+  --clr-facebook: #178ff5;
+  --clr-instagram: linear-gradient(
+    to left,
+    #fdc366 0%,
+    #ee877e 50%,
+    #df4896 100%
+  );
+  --clr-switcher-hover: linear-gradient(
+    45deg,
+    hsl(210, 78%, 56%) 0%,
+    hsl(146, 68%, 55%) 100%
+  );
+}
+
+//light theme
+:root:has(#switcher:not(:checked)) {
+  --clr-body-sec: #f7f9ff;
+  --clr-bg-primary: #fff;
+  --clr-primary: #1d1f29;
+  --clr-bg-card: #f1f3fa;
+  --clr-bg-card-hover: #E1E4F0;
+  --clr-grey: #63687d;
+  --clr-divider: #848bab;
+  --clr-switcher: #aeb3cb;
+}
+// dark theme
+:root:has(#switcher:checked) {
+  --clr-body-sec: #20222f;
+  --clr-primary: #fff;
+  --clr-bg-primary: #1d1f29;
+  --clr-bg-card: #252b42;
+  --clr-bg-card-hover: #333a55;
+  --clr-grey: #8c98c6;
+  --clr-divider: #333a55;
+  --clr-switcher: linear-gradient(
+    45deg,
+    hsl(210, 78%, 56%) 0%,
+    hsl(146, 68%, 55%) 100%
+  );
+}
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@function getColor($name) {
+  @return var(--clr-#{$name});
+}
+
+@mixin g-border-classes {
+  @each $platform, $color in $social-colors {
+    .border-#{$platform} {
+      background: $color;
+    }
+  }
+}
+
+h1 {
+  color: getColor(primary);
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 48px;
+  letter-spacing: -2px;
+}
+
+h2 {
+  color: getColor(primary);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  @include tablet {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+h3 {
+  color: getColor(primary);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+h4 {
+  color: getColor(grey);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+h5 {
+  color: getColor(grey);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+}

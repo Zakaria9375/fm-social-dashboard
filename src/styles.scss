@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'scss/base';
+
+.xflex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.zflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+

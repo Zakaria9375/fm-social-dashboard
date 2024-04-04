@@ -1,0 +1,45 @@
+@import "../scss/_base.scss";
+
+
+:host {
+  @include mobile {
+    padding-top: 17px;
+    width: 100%;
+  }
+}
+
+.switcher-container {
+  gap: 13px;
+  @include mobile {
+    justify-content: space-between;
+  }
+  #switcher {
+    display: none;
+  }
+  .switch-btn {
+    background: var(--clr-switcher);
+    width: 48px;
+    height: 24px;
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.25s;
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: var(--clr-bg-card);
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      margin: 3px;
+      right: 0;
+      transition: 0.25s;
+    }
+    &:hover {
+      background: var(--clr-switcher-hover);
+    }
+  }
+  input:checked + .switch-btn::before {
+    transform: translateX(-24px);
+  }
+}

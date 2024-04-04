@@ -1,0 +1,15 @@
+<div class="border-card" [ngClass]="'border-'+card.img"></div>
+<div class="card-info xflex">
+  <img [src]="'assets/images/icon-' + card.img + '.svg'" [alt]="'icon' + card.img">
+  <h5>{{card.at}}</h5>
+</div>
+
+<div class="score">
+  <h1>{{card.score}}</h1>
+  <h5>{{card.audiance}}</h5>
+</div>
+
+<div class="card-subscore xflex">
+  <img [src]="'assets/images/icon-' + card.icon + '.svg'" [alt]="'icon'+card.icon">
+  <h5 [ngClass]="cardClasses()"><span>{{card.subScore}}</span> Today</h5>
+</div>
