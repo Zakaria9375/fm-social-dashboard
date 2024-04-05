@@ -40,7 +40,6 @@ Scopes of Accessibility testing for this app:
 * Zooming (text-only): No loss of content till 150%.
 * Keyboard-only: Interactive elements are accessible(focusable) and clickable.
 * Static code analysis: passed except for the following: Heading nesting  
-* Screen Reader: 
 
 ![Accessibility test](./src/assets/access.png)
 
