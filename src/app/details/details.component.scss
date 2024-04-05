@@ -1,7 +1,7 @@
 @import "../scss/base";
 
 :host {
-  padding: 27px 31px 19px 24px;
+  padding: 24px 31px 19px 24px;
   background-color: getColor(bg-card);
   &:hover {
     background-color: getColor(bg-card-hover);
@@ -13,6 +13,9 @@
     max-width: 255px;
   }
   .details-info {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
     img {
       height: 20px;
     }

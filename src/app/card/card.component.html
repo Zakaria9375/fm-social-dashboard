@@ -1,6 +1,6 @@
 <div class="border-card" [ngClass]="'border-'+card.img"></div>
 <div class="card-info xflex">
-  <img [src]="'assets/images/icon-' + card.img + '.svg'" [alt]="'icon' + card.img">
+  <img [src]="'assets/images/icon-' + card.img + '.svg'" [alt]="card.img + ' logo'">
   <h5>{{card.at}}</h5>
 </div>
 
@@ -10,6 +10,6 @@
 </div>
 
 <div class="card-subscore xflex">
-  <img [src]="'assets/images/icon-' + card.icon + '.svg'" [alt]="'icon'+card.icon">
+  <img [src]="'assets/images/icon-' + card.icon + '.svg'" [alt]="'arrow-'+card.icon + ' icon'">
   <h5 [ngClass]="cardClasses()"><span>{{card.subScore}}</span> Today</h5>
 </div>

@@ -1,11 +1,11 @@
-<div class="details-info zflex">
+<div class="details-info">
   <h4>{{cardDetail.title}}</h4>
-  <img [src]="'assets/images/icon-' + cardDetail.img + '.svg'" [alt]="'icon' + cardDetail.img">
+  <img [src]="'assets/images/icon-' + cardDetail.img + '.svg'" [alt]="cardDetail.img + ' logo'">
 </div>
 <div class="details-score zflex">
   <h3>{{cardDetail.score}}</h3>
   <div class="cardDetail-subscore xflex">
-    <img [src]="'assets/images/icon-' + cardDetail.icon + '.svg'" [alt]="'icon'+cardDetail.icon">
+    <img [src]="'assets/images/icon-' + cardDetail.icon + '.svg'" [alt]="'arrow-'+ cardDetail.icon + ' icon'">
     <h5 [ngClass]="cardClasses()">{{cardDetail.subScore}}</h5>
   </div>
 </div>

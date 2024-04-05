@@ -25,4 +25,10 @@ export class ThemeSwitcherComponent {
       this.switcher = false;
     }
   }
+  onKeydown($event: KeyboardEvent) {
+    if ($event.key === 'Enter') {
+      $event.preventDefault();
+      this.toggleTheme();
+    }
+  }
 }

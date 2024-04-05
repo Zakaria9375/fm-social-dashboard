@@ -49,8 +49,10 @@ main {
         margin-top: 46px;
         margin-bottom: 24px;
         color: getColor(grey);
-        line-height: 29px;
-        font-size: 24px;
+        @include tablet {
+          line-height: 1.8125rem;
+          font-size: 1.5rem;
+        }
       }
     }
     .all-cards {

@@ -9,21 +9,21 @@
       </div>
       <app-theme-switcher />
     </header>
-    <div class="content">
-      <div class="all-cards">
-      @for (item of cards; track $index) {
-      <app-card [card]="item"/>
-      }
-    </div>
+    <section class="content" aria-label="Cards for social media platforms">
+      <section class="all-cards">
+        @for (item of cards; track $index) {
+        <app-card [card]="item" [attr.aria-label]="item.img + ' card'" [tabindex]="$index + 2"/>
+        }
+      </section>
 
-    <h2>Overview - Today</h2>
-    <div class="all-details">
-      @for (detail of cardDetails; track $index) {
-      <app-details  [cardDetail]="detail"/>
-      }
-    </div>
+      <h2>Overview - Today</h2>
+      <section class="all-details" aria-label="Details in every socail media platform">
+        @for (detail of cardDetails; track $index) {
+        <app-details [cardDetail]="detail" [attr.aria-label]="'details for ' + detail.title + ' in ' + detail.img"/>
+        }
+      </section>
 
-    </div>
+    </section>
 
 
   </div>
