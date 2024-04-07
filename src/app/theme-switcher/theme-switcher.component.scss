@@ -16,6 +16,10 @@
   #switcher {
     display: none;
   }
+  button {
+    border: none;
+    background: none;
+  }
   .switch-btn {
     background: var(--clr-switcher);
     width: 48px;

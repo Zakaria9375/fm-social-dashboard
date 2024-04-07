@@ -26,7 +26,11 @@ export class ThemeSwitcherComponent {
     }
   }
   onKeydown($event: KeyboardEvent) {
-    if ($event.key === 'Enter') {
+    if (
+      $event.key === 'Enter' ||
+      $event.key === 'Spacebar' ||
+      $event.key === ' '
+    ) {
       $event.preventDefault();
       this.toggleTheme();
     }
