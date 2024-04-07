@@ -1,7 +1,7 @@
 <div class="switcher-container xflex">
   <h4>Dark Mode</h4>
-  <button class="xflex" tabindex="0" (keydown)="onKeydown($event)">
+  <div class="xflex" tabindex="0" (keydown)="onKeydown($event)">
     <input type="checkbox" id="switcher" [checked]="switcher" aria-label="Toggle dark mode">
     <label for="switcher" class="switch-btn" (click)="toggleTheme()"></label>
-  </button>
+  </div>
 </div>
